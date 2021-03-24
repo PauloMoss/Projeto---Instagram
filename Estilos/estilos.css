@@ -1,0 +1,81 @@
+body {
+    background-color: #E5E5E5;
+}
+.topo {
+    background-color: #fff;
+    height: 54px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.funcoes {
+    width: 1014px;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 0 auto;
+}
+.funcoes_mobile {
+    display: none;
+}
+.box-body {
+    width: 1014px;
+    background-color: #E5E5E5;
+    margin-left: 20vw;
+    margin: 88px auto 24px auto;
+    display: flex;
+}
+.stories {
+    height: 118px;
+    width: 614px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.sidebar div {
+    background-color: gray;
+    height: 600px;
+    width: 400px;
+    position: fixed;
+    top: 88px;
+    left: auto;
+}
+.post {
+    background-color: #fff;
+    width: 614px;
+    height: 750px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 935px) {
+
+    .funcoes {
+        width: 100%;
+    }
+    .sidebar {
+        display: none;
+    }
+    .box-body {
+        width: 100%;
+        justify-content: center;
+    }
+
+@media (max-width: 614px) {
+
+    .instagram, .pesquisa, .icones {
+        display: none;
+    }
+    .funcoes_mobile {
+        background-color: purple;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .stories {
+        width: 100vw;
+    }
+    .post {
+        width: 100%;
+}
