@@ -6,9 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Estilos/reset.css">
         <link rel="stylesheet" href="Estilos/estilos.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
         <title>Instagram</title>
     </head>
     <body>
+
+                            <!-- Seção do Topo -->
+
 
         <div class="topo">
             <div class="funcoes">
@@ -16,8 +21,8 @@
                     <ion-icon name="logo-instagram"></ion-icon>
                     <img src="Img/logo.png" alt="Logo Instagram">
                 </div>
-                <div class="pesquisa"> 
-                    <input type="text" placeholder="Pesquisar"/>
+                <div> 
+                    <input class="pesquisa" type="text" placeholder="Pesquisar"/>
                 </div>
                 <div class="icones">
                     <ion-icon name="send-outline"></ion-icon>
@@ -36,31 +41,181 @@
 
         <div class="box-body">
             <div class="posts">
+
+                        <!-- Seção de Stories -->
+
                 <div class="stories">
+                    <ion-icon class="next_button" name="chevron-forward-circle-outline"></ion-icon>
+                    <div>
+                        <div>
+                            <img src="Img\9gag.jpg" alt="Logo 9gag">
+                        </div>
+                        <p>9gag</p> 
+                    </div>
+                    <div>
+                        <div>
+                            <img src="Img\meowed.png" alt="meowed">
+                        </div>
+                        <p>meowed</p> 
+                    </div>
+                    <div>
+                        <img src="Img\meowed.png" alt="Logo 9gag">
+                    </div>
+                    <div>
+                        <img src="Img\meowed.png" alt="Logo 9gag">
+                    </div>
+                    <div>
+                        <img src="Img\meowed.png" alt="Logo 9gag">
+                    </div>
+                    <div>
+                        <img src="Img\meowed.png" alt="Logo 9gag">
+                    </div>
+                    <div>
+                        <img src="Img\meowed.png" alt="Logo 9gag">
+                    </div>
+                    <div>
+                        <img src="Img\meowed.png" alt="Logo 9gag">
+                    </div>
                 </div>
+
+
+                
+                        <!-- Seção de Posts -->
                 
                 <div class="post">
+                    <div class="titulo_post">
+                        <div class="logo_nome">
+                            <img src="Img\meowed.png" alt="Logo meowed">
+                            <p class="nome_perfil">meowed</p>
+                        </div>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                    <img src="Img\gato_celular.jpg" alt="gato meowed">
+                    <div>
+                        <div class="icones">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                            <ion-icon name="send-outline"></ion-icon>
+                        </div>
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <div class="logo_nome">
+                            <img src="Img\meowed.png" alt="Logo meowed">
+                            <p>Curtido por <span class="bold">meowed</span> e <span class="bold">outras 10 pessoas</span></p>
+                        </div>
+                    </div>
+                    
+                <div class="comentarios">
+                    <ion-icon name="happy-outline"></ion-icon>
+                    <input type="text" class="txtComent" placeholder="Adicione um comentário..."/>
+                    <button class="button">Publicar</button>
+                </div>
+            </div>
+    
+
+            <div class="post">
+                <div>
+                    <div class="titulo_post">
+                        <ion-icon name="person-outline"></ion-icon>
+                        Título
+                    </div>
                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+                <img src="Img/galaxy.jpg" alt="galaxy">
+                <div>
+                    <div class="icones">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                        <ion-icon name="send-outline"></ion-icon>
+                    </div>
                     <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
+                teste
+            <div class="comentarios">
+                <ion-icon name="happy-outline"></ion-icon>
+                <input type="text" class="txtComent" placeholder="Adicione um comentário..."/>
+                <button class="button">Publicar</button>
+            </div>
+        </div>
     
                 <div class="post">
+                    <div>
+                        <div class="titulo_post">
+                            <ion-icon name="person-outline"></ion-icon>
+                            Título
+                        </div>
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </div>
+                    <video width="100%" height="614" muted autoplay>
+                        <source src="Img/video.mp4" type="video/mp4">
+                        <source src="Img/video.ogg" type="video/ogg">
+                    </video>
+                    <div>
+                        <div class="icones">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                            <ion-icon name="send-outline"></ion-icon>
+                        </div>
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </div>
+                    teste
                     <div class="comentarios">
                         <ion-icon name="happy-outline"></ion-icon>
                         <input type="text" class="txtComent" placeholder="Adicione um comentário..."/>
                         <button class="button">Publicar</button>
                     </div>
                 </div>  
-    
-                <div class="post">
-                </div>  
             </div>
+
+                        <!-- Seção de Sidebar Fixa -->
+
+
             <div class="sidebar">
-                <div>
-                    
+                <div class="sidebar_fixed">
+                    <div>
+                        <div class="sugestao_destaque">
+                            <img src="Img\9gag.jpg" alt="Logo 9gag">
+                            <div>
+                                <p class="nome_perfil">catatonic </p> 
+
+                                <p class="texto_sugestoes">Catana</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="sugestão_pra_voce">
+                        <p class="texto_sugestoes bold">Sugestões para você</p> 
+
+                        <p class="bold">Ver tudo</p>
+                    </div> 
+                    <div class="sugestao">
+                        <div class="logo_perfil">
+                            <img src="Img\badvibesmemes 1.png" alt="Logo badvibesmemes">
+                            <div>
+                                <p class="nome_perfil">bad.vibes.memes</p> 
+
+                                <p class="texto_sugestoes">Segue você</p>
+                            </div> 
+                        </div>
+                        <button class="button_seguir">Seguir</button>
+                    </div>
+                    <div class="sugestao">
+                        <div class="logo_perfil">
+                            <img src="Img\9gag.jpg" alt="Logo 9gag">
+                            <div>
+                                <p>sugestao pra voce </p> 
+
+                                <p>ver tudo</p>
+                            </div> 
+                        </div>
+                        <button class="button_seguir">Seguir</button>
+                    </div>
                 </div>
             </div>
+
+                        <!-- Seção de Mobile -->
+
+
             <div class="barra-nav_mobile">
                 <ion-icon name="home-outline"></ion-icon>
                 <ion-icon name="search-outline"></ion-icon>

@@ -1,6 +1,40 @@
+
+/* Seção de Configuração*/
+
 body {
-    background-color: #E5E5E5;
+    background-color: #fafafa;
+    font-family: 'Roboto', sans-serif;
 }
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 12px;
+    color: #000;
+}
+.texto_sugestoes {
+    color: #8E8E8E;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.bold {
+    font-weight: 500;
+    font-size: 14px;
+}
+.nome_perfil {
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+}
+.stories p {
+    font-size: 12px;
+    color: #262626;
+    line-height: 14px;
+    margin-top: 6px;
+}
+
+/* Seção de Topo*/
+
 .topo {
     background-color: #fff;
     height: 54px;
@@ -8,7 +42,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #DBDBDB;
+    z-index: 10;
 }
 .funcoes {
     width: 1014px;
@@ -18,12 +53,32 @@ body {
     align-items: center;
     margin: 0 auto 0 auto;
 }
+.instagram {
+    display: flex;
+    align-items: center;
+}
+ion-icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+}
+.pesquisa {
+    width: 215px;
+    height: 28px;
+    background-color: #fafafa;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    text-align: center;
+}
 .funcoes_mobile {
     display: none;
 }
+
+/* Seção de Stories*/
+
 .box-body {
-    width: 1014px;
-    background-color: #E5E5E5;
+    width: 935px;
+    background-color: #fafafa;
     margin-left: 20vw;
     margin: 88px auto 24px auto;
     display: flex;
@@ -31,49 +86,157 @@ body {
 .stories {
     height: 118px;
     width: 614px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    background-image: url(9gag.jpg);
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    overflow-x: hidden;
+    position: relative;
 }
-.sidebar div {
-    background-color: gray;
-    height: 600px;
-    width: 400px;
-    position: fixed;
-    top: 88px;
-    left: auto;
+.stories > div {
+    margin-left: 16px;
+    text-align: center;
 }
+.stories  div div {
+    width: 66px;
+    min-width: 66px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("stories_background.jpg");
+    background-size: cover;
+}
+.stories img {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+}
+.next_button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 59px;
+    right: 0px;
+}
+
+/* Seção de Posts*/ 
+
 .post {
     background-color: #fff;
     width: 614px;
-    height: 750px;
+    height: auto;
     margin-bottom: 54px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+.titulo_post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.post div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.post > img {
+    width: 100%;
+    margin-top: 10px;
+}
+.logo_nome img {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 .comentarios{
     width: 100%;
-    background-color:#E0EEEE;
-    border:solid 2px #5F9EA0;
-    border-radius:10px;
+    background-color:#fff;
+    border-radius:2px;
     height:32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .txtComent {
-    background-color:transparent;
+    background-color: inherit;
     padding-left:5px;
-    font-size:18px;
+    font-size:  14px;
     border:none;
     height:32px;
     width: 100%;
   }
   .button {
-    border:none;
-    height:32px;
-    border-radius:0 7px 7px 0;
-    width:70px;
+    border: none;
     font-weight:bold;
-    background:#5F9EA0;
+    background-color: inherit;
+    color: #B2DFFC;
+    transition-duration: 300ms;
+ 
   }
+  button:hover {
+      color: #0095F6;
+  }
+
+/* Seção de Sidebar Fixa*/
+
+.sidebar_fixed {
+    height: 600px;
+    width: 293px;
+    position: fixed;
+    top: 88px;
+    left: auto;
+    padding-left: 30px;
+}
+.sidebar_fixed div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sugestao_destaque {
+    height: 103px;
+}
+.sugestão_pra_voce {
+    padding-bottom: 15px;
+
+}
+.logo_perfil {
+    padding: 10px 0;
+}
+.logo_perfil div, .sugestao_destaque div {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin-left: 7px;
+    height: 32px;
+}
+.sugestao_destaque img {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+}
+.logo_perfil img {
+    width: 35px;
+    height: 35px;
+    border-radius: 16px;
+}
+.button_seguir {
+    border: none;
+    font-weight:bold;
+    background-color: inherit;
+    color: #139EF2;
+    
+}
+
+
+  /* Seção Responsiva*/
 
 .barra-nav_mobile {
     display: none;
@@ -104,9 +267,13 @@ body {
     }
     .box-body {
         margin-bottom: 20px;
+        margin-top: 54px;
     }
     .stories {
         width: 100vw;
+        background-color: inherit;
+        border: none;
+        margin-bottom: 0;
     }
     .post {
         width: 100%;
