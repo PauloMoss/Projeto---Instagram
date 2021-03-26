@@ -263,7 +263,15 @@ ion-icon {
     background-color: inherit;
     color: #139EF2;
 }
+.caixa_texto {
 
+font-size: 12px;
+line-height: 16px;
+color: #C7C7C7;
+}
+.fechamento_sidebar {
+    margin-top: 25px;
+}
   /* Seção Responsiva*/
 
 .barra-nav_mobile {
