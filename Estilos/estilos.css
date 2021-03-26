@@ -20,10 +20,11 @@ p {
 .bold {
     font-weight: 500;
     font-size: 14px;
+    color: #8E8E8E;
 }
 .nome_perfil {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     color: #262626;
 }
 .post a:hover {
@@ -34,21 +35,23 @@ p {
 /* Seção de Topo*/
 
 .topo {
-    background-color: #fff;
-    height: 54px;
-    width: 100%;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
+
+    height: 54px;
+    width: 100%;
     border-bottom: 1px solid #DBDBDB;
-    z-index: 10;
+    background-color: #fff;
 }
 .funcoes {
-    width: 935px;
     display: flex;
-    height: 100%;
     justify-content: space-between;
     align-items: center;
+
+    width: 935px;
+    height: 100%;
     margin: 0 auto 0 auto;
 }
 .instagram {
@@ -56,9 +59,9 @@ p {
     align-items: center;
 }
 .instagram img {
-    margin-left: 10px;
     width: 103px;
     height: 29px;
+    margin-left: 10px;
 }
 .separaçao {
     width: 1px;
@@ -71,12 +74,12 @@ ion-icon {
     margin: 0 10px;
 }
 .pesquisa {
+    text-align: center;
     width: 215px;
     height: 28px;
     background-color: #fafafa;
     border: 1px solid #DBDBDB;
     border-radius: 3px;
-    text-align: center;
 }
 .funcoes_mobile {
     display: none;
@@ -85,38 +88,40 @@ ion-icon {
 /* Seção de container do conteudo*/
 
 .box-body {
+    display: flex;
+
     width: 935px;
     background-color: #fafafa;
-    margin-left: 20vw;
-    margin: 88px auto 0px auto;
-    display: flex;
+    margin: 88px auto 0px auto; 
 }
 
 /* Seção de Stories*/
 
 .stories {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+
     height: 118px;
     width: 614px;
     margin-bottom: 24px;
     background-color: #fff;
-    display: flex;
-    align-items: center;
     border: 1px solid #DBDBDB;
     border-radius: 3px;
-    overflow-x: hidden;
-    position: relative;
 }
 .stories > div {
-    margin-left: 16px;
     text-align: center;
+    margin-left: 16px;
 }
 .stories_background{
-    width: 66px;
-    min-width: 66px;
-    height: 66px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 66px;
+    min-width: 66px;
+    height: 66px;
     background-image: url("stories_background.jpg");
     background-size: cover;
 }
@@ -136,6 +141,7 @@ ion-icon {
     position: absolute;
     top: 45px;
     right: 0px;
+
     width: 35px;
     height: 35px;
     border: none;
@@ -177,23 +183,24 @@ ion-icon {
     object-fit: cover;
 }
 .comentarios{
-    width: 100%;
-    background-color:#fff;
-    border-radius:2px;
-    height:40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 100%;
+    height:40px;
+    background-color:#fff;
+    border-radius:2px;
     border-top: 1px solid #eeeded;
     margin-top: 5px;
   }
   .txtComent {
-    background-color: inherit;
-    padding-left:5px;
     font-size:  14px;
-    border:none;
     height:32px;
     width: 100%;
+    border:none;
+    padding-left:5px;
+    background-color: inherit;
   }
   .button {
     font-weight:bold;
@@ -207,9 +214,9 @@ ion-icon {
 /* Seção de Sidebar Fixa*/
 
 .sidebar_fixed {
-    width: 293px;
     position: fixed;
     top: 88px; /*A posiçao horizontal não foi fixada para manter diplay fluido*/
+    width: 293px;
     padding-left: 30px;
 }
 .sugestao_destaque {
@@ -234,8 +241,9 @@ ion-icon {
     flex-direction: column;
     justify-content: space-between;
     align-items:flex-start;
-    margin-left: 12px;
+
     height: 32px;
+    margin-left: 12px;
 }
 .sugestao_destaque img {
     width: 56px;
@@ -247,6 +255,7 @@ ion-icon {
     width: 35px;
     height: 35px;
     border-radius: 16px;
+    object-fit: cover;
 }
 .button_seguir {
     border: none;
@@ -270,9 +279,10 @@ ion-icon {
         display: none;
     }
     .box-body {
-        width: 100%;
         justify-content: center;
+        width: 100%;
     }
+}
 
 @media (max-width: 614px) {
 
@@ -280,10 +290,10 @@ ion-icon {
         display: none;
     }
     .funcoes_mobile {
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
     .box-body {
         margin: 54px 0 20px 0;
@@ -293,6 +303,9 @@ ion-icon {
         background-color: #fff; /* A cor #fff foi mantida para permanecer igual à imagem usada como background (No figma ta inherit)*/
         border: none;
         margin-bottom: 0;
+    }
+    .button_stories {
+        display: none;
     }
     .post {
         width: 100%;
@@ -309,9 +322,13 @@ ion-icon {
         position: fixed;
         bottom: 0;
         left: 0;
+
         width: 100%;
         height: 54px;
         background-color: #fff;
         border-top: 1px solid #eaeaea;
+    }
+    .barra-nav_mobile a {
+        color: #000;
     }
 }
