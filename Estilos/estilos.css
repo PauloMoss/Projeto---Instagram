@@ -26,11 +26,9 @@ p {
     font-weight: bold;
     color: #262626;
 }
-.stories p {
-    font-size: 12px;
-    color: #262626;
-    line-height: 14px;
-    margin-top: 6px;
+.post a:hover {
+    text-decoration: underline;
+    filter: brightness(100%);
 }
 
 /* Seção de Topo*/
@@ -46,7 +44,7 @@ p {
     z-index: 10;
 }
 .funcoes {
-    width: 1014px;
+    width: 935px;
     display: flex;
     height: 100%;
     justify-content: space-between;
@@ -56,6 +54,16 @@ p {
 .instagram {
     display: flex;
     align-items: center;
+}
+.instagram img {
+    margin-left: 10px;
+    width: 103px;
+    height: 29px;
+}
+.separaçao {
+    width: 1px;
+    height: 30px;
+    background-color: #DBDBDB;
 }
 ion-icon {
     width: 18px;
@@ -74,15 +82,18 @@ ion-icon {
     display: none;
 }
 
-/* Seção de Stories*/
+/* Seção de container do conteudo*/
 
 .box-body {
     width: 935px;
     background-color: #fafafa;
     margin-left: 20vw;
-    margin: 88px auto 24px auto;
+    margin: 88px auto 0px auto;
     display: flex;
 }
+
+/* Seção de Stories*/
+
 .stories {
     height: 118px;
     width: 614px;
@@ -90,7 +101,6 @@ ion-icon {
     background-color: #fff;
     display: flex;
     align-items: center;
-    background-image: url(9gag.jpg);
     border: 1px solid #DBDBDB;
     border-radius: 3px;
     overflow-x: hidden;
@@ -100,7 +110,7 @@ ion-icon {
     margin-left: 16px;
     text-align: center;
 }
-.stories  div div {
+.stories_background{
     width: 66px;
     min-width: 66px;
     height: 66px;
@@ -110,17 +120,26 @@ ion-icon {
     background-image: url("stories_background.jpg");
     background-size: cover;
 }
-.stories img {
+.stories img, .stories a{
     width: 56px;
     height: 56px;
     border-radius: 28px;
 }
-.next_button {
-    width: 25px;
-    height: 25px;
+.stories p {
+    font-size: 13px;
+    color: #262626;
+    line-height: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.button_stories {
     position: absolute;
-    top: 59px;
+    top: 45px;
     right: 0px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    color: #6b6b6b;
 }
 
 /* Seção de Posts*/ 
@@ -128,7 +147,6 @@ ion-icon {
 .post {
     background-color: #fff;
     width: 614px;
-    height: auto;
     margin-bottom: 54px;
     border: 1px solid #DBDBDB;
     border-radius: 3px;
@@ -147,6 +165,7 @@ ion-icon {
 }
 .post > img {
     width: 100%;
+    height: 612px;
     margin-top: 10px;
 }
 .logo_nome img {
@@ -155,15 +174,18 @@ ion-icon {
     border-radius: 16px;
     margin-left: 16px;
     margin-right: 16px;
+    object-fit: cover;
 }
 .comentarios{
     width: 100%;
     background-color:#fff;
     border-radius:2px;
-    height:32px;
+    height:40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #eeeded;
+    margin-top: 5px;
   }
   .txtComent {
     background-color: inherit;
@@ -174,53 +196,52 @@ ion-icon {
     width: 100%;
   }
   .button {
-    border: none;
     font-weight:bold;
-    background-color: inherit;
     color: #B2DFFC;
     transition-duration: 300ms;
- 
   }
-  button:hover {
+  .button:hover {
       color: #0095F6;
   }
 
 /* Seção de Sidebar Fixa*/
 
 .sidebar_fixed {
-    height: 600px;
     width: 293px;
     position: fixed;
-    top: 88px;
-    left: auto;
+    top: 88px; /*A posiçao horizontal não foi fixada para manter diplay fluido*/
     padding-left: 30px;
 }
-.sidebar_fixed div {
+.sugestao_destaque {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 103px;   
+}
+.sugestao, .sugestao div, .sugestão_pra_voce {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.sugestao_destaque {
-    height: 103px;
-}
 .sugestão_pra_voce {
     padding-bottom: 15px;
-
 }
 .logo_perfil {
     padding: 10px 0;
 }
 .logo_perfil div, .sugestao_destaque div {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items:flex-start;
-    margin-left: 7px;
+    margin-left: 12px;
     height: 32px;
 }
 .sugestao_destaque img {
     width: 56px;
     height: 56px;
     border-radius: 28px;
+    object-fit: cover;
 }
 .logo_perfil img {
     width: 35px;
@@ -232,9 +253,7 @@ ion-icon {
     font-weight:bold;
     background-color: inherit;
     color: #139EF2;
-    
 }
-
 
   /* Seção Responsiva*/
 
@@ -264,19 +283,24 @@ ion-icon {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     .box-body {
-        margin-bottom: 20px;
-        margin-top: 54px;
+        margin: 54px 0 20px 0;
     }
     .stories {
         width: 100vw;
-        background-color: inherit;
+        background-color: #fff; /* A cor #fff foi mantida para permanecer igual à imagem usada como background (No figma ta inherit)*/
         border: none;
         margin-bottom: 0;
     }
     .post {
         width: 100%;
+    }
+    .post > img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
     }
     .barra-nav_mobile {
         display: flex;

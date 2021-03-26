@@ -50,9 +50,22 @@ table {
 button {
 	outline: 0;
 	cursor: pointer;
+	border: none;
+	background-color: inherit;
+	padding: 0;
+	margin: 1px 6px;
 }
 
 input {
 	outline: 0;
 	cursor:text;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	color: inherit;
+  }
+a:hover {
+	filter: brightness(120%);
 }
